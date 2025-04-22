@@ -1239,10 +1239,10 @@ void alertasLed(byte color)
     digitalWrite(ledB, 0);
     break;
 
-  case 5: // Modo config. - blanco
-    Serial.println("LED COLOR BLANCO");
+  case 5: // Modo config. - magneta
+    Serial.println("LED COLOR MAGNETA");
     digitalWrite(ledR, 255);
-    digitalWrite(ledG, 255);
+    digitalWrite(ledG, 0);
     digitalWrite(ledB, 222);
     break;
   }
