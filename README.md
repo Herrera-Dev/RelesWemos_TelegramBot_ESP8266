@@ -2,15 +2,11 @@
 
 Este proyecto permite controlar **relés** de manera remota a través de un **bot de Telegram**. Utiliza un **ESP8266**, que recibe comandos para encender o apagar relés, gestionar usuarios y configurar horarios de encendido y apagado automáticos. Además.
 
----
-
 ## 🖼️ Diagrama
 
 <p align="center">
-  <img src="RelesWemos_TelegramBot_ESP8266_bb.jpg" alt="Foto" width="700">
+  <img src="RelesWemos_TelegramBot_ESP8266_bb.png" alt="Foto" width="700">
 </p>
-
----
 
 ## 📡 Funcionamiento
 
@@ -20,8 +16,6 @@ Este proyecto permite controlar **relés** de manera remota a través de un **bo
 4. **Incorpora un sistema de alertas LED** para indicar el estado de la conexión y configuración.
 5. **Permite la gestión de usuarios y relés registrados.**
 
----
-
 ## 🚦 LEDs de Alertas
 
 - 🔴 **(Rojo)** - Sin conexión WiFi.
@@ -29,8 +23,6 @@ Este proyecto permite controlar **relés** de manera remota a través de un **bo
 - 🟡 **(Amarillo)** - Sin datos configurados.
 - ⚪ **(Blanco)** - Modo configuración activado.
 - 🟢 **(Verde)** - Todo funcionando correctamente.
-
----
 
 ## 📜 Comandos del Bot de Telegram
 
@@ -57,16 +49,12 @@ Este proyecto permite controlar **relés** de manera remota a través de un **bo
 | `/pruebaLed`  | Prueba el funcionamiento de los LEDs de advertencia.   |
 | `/debug`      | Muestra los datos en el puerto serial para depuración. |
 
----
-
 ## 🖼️ Capturas
 
 <p align="center">
   <img src="Screenshot/Screenshot_1.jpg" alt="Estado 1" width="45%">
   <img src="Screenshot/Screenshot_2.jpg" alt="Estado 2" width="45%">
 </p>
-
----
 
 ## ⚙️ Flujo de Operaciones
 
@@ -75,31 +63,26 @@ Este proyecto permite controlar **relés** de manera remota a través de un **bo
 3. **Alertas LED**: Indican el estado del sistema en tiempo real.
 4. **Notificaciones**: Se envían mensajes en Telegram cuando hay cambios importantes o errores.
 
----
-
 ## 🛠️ Consideraciones
 
 - Se requiere una **conexión estable a Internet** para la correcta interacción con Telegram.
 - Si el dispositivo pierde conexión, intentará **reconectarse automáticamente**.
 - El **modo de configuración** permite ingresar credenciales de acceso mediante el AP de **WifiManager**.
 
----
-
 ## 📌 Configuración del Entorno
-
-- **Placa**: LOLIN(WEMOS) D1 mini
 - **IDE**: Arduino IDE `v2.3.x`
+- **Placa**: LOLIN(WEMOS) D1 mini
 - **Framework**: Arduino ESP8266 `v3.1.2`
-- **Flash Size**: `4MB(FS: 3MB OTA: 512MB)`
+- **Partition**: `4MB(FS: 3MB OTA: 512MB)`
 - **Librerías necesarias**:
   - `WiFiManager` `v2.0.17` → Para la configuración de la conexión WiFi.
   - `UniversalTelegramBot` `v1.3.0` → Para la comunicación con Telegram.
   - `ArduinoJson` `v6.21.5` → Para el manejo de datos en JSON.
 
----
-
 ## 📡 Componentes
 
-- 1x **Placa ESP8266**
-- 1x **Módulo de Relés** (dependiendo del número de dispositivos a controlar)
-- 1x **Led RGB**
+- 1 **Placa ESP8266**
+- 1 **Módulo de Relés** (dependiendo del número de dispositivos a controlar)
+- 1 **Led RGB**
+- 1 **Pulsador**
+- 4 **Resistencias**
